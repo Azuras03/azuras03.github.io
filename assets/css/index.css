@@ -2,8 +2,8 @@
     --blue: rgb(96, 140, 223);
     --darkblue: rgb(86, 122, 202);
     --darkerblue: rgb(80, 116, 194);
-    --whiteBG: #ffffff00;
     --darkwhiteBG: #001b421f;
+    --clickableColor: rgb(11, 45, 59);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -41,6 +41,7 @@
     0% {
         background-position: 0% 0%
     }
+
     100% {
         background-position: 0% 100%
     }
@@ -99,29 +100,29 @@ body {
     background-size: 46px 46px;
     background-position: 0 0, 23px 23px;
     animation: dotsAnimated 30s linear infinite;
-    background-color: var(--whiteBG);
     z-index: 100;
 }
 
 main {
+    padding-top: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap:15px;
+    gap: 15px;
 }
 
 .huge {
-    width:50%
+    width: 50%
 }
 
 .normal {
-    width:30%
+    width: 30%
 }
 
 .smol {
-    width:30%
+    width: 10%
 }
 
 .textWrapper {
@@ -151,24 +152,15 @@ main {
     color: rgb(196, 226, 255);
 }
 
-.topnav img {
-    object-fit: contain;
-    size: cover;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: right;
-    padding-top: 1px;
-    padding-right: 10px;
-    align-self: center;
-    transition: all 0.5s;
+#logo {
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }
 
-.topnav img:hover {
+#logo:hover {
     transform: scale(1.1);
 }
 
-.topnav img:active {
+#logo:active {
     transform: scale(.9);
 }
 
@@ -229,12 +221,38 @@ a:active {
     transition: all 0.5s;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(22, 60, 75);
     border-radius: 50px;
     padding: 20px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.418);
-    color: rgb(226, 243, 255);
     align-items: center;
     align-self: center;
     animation: intro 1s cubic-bezier(0, 0, 0, 1);
+}
+
+.light {
+    color: rgb(9, 49, 77);
+    background-color: rgb(200, 239, 255);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.418);
+}
+
+.dark {
+    color: rgb(226, 243, 255);
+    background-color: rgb(22, 60, 75);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.418);
+}
+
+.clickable {
+    box-shadow: 0px 10px 0 var(--clickableColor);
+    user-select: none;
+    transition: all .3s cubic-bezier(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.clickable:hover {
+    box-shadow: 0px 12px 0 var(--clickableColor);
+    transform: translateY(-2px);
+}
+
+.clickable:active {
+    box-shadow: 0px 0px 0 var(--clickableColor);
+    transform: translateY(10px);
 }
