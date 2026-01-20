@@ -86,6 +86,7 @@ html {
     font-family: "Poppins";
     font-weight: 500;
     background: linear-gradient(270deg, #72c9dd, #7279dd);
+    /* test background: linear-gradient(10deg, #0c2b58, #569eda); */
     background-size: 400% 400%;
     animation: backgroundColorAnimated 30s ease infinite;
     height: 100%;
@@ -95,12 +96,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     background-image: radial-gradient(var(--darkwhiteBG) 4px, transparent 4px), radial-gradient(var(--darkwhiteBG) 4px, transparent 4px);
     background-size: 46px 46px;
     background-position: 0 0, 23px 23px;
     animation: dotsAnimated 30s linear infinite;
     z-index: 100;
+    min-height: 100%;
 }
 
 main {
@@ -110,7 +111,18 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 15px;
+    gap: 25px;
+    padding-bottom: 150px;
+}
+
+.horizontalElements {
+    display: flex;
+    gap:15px;
+    flex-direction: row;
+}
+
+.imgFit {
+    max-width: 60%;
 }
 
 .huge {
@@ -130,7 +142,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
 }
 
 .topnav {
@@ -178,7 +190,6 @@ main {
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: introcolor 2s linear infinite alternate-reverse;
 }
 
 .botnav p {
@@ -217,6 +228,7 @@ a:active {
 }
 
 .bulle {
+    overflow: hidden;
     display: flex;
     transition: all 0.5s;
     flex-direction: column;
