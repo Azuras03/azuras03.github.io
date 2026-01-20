@@ -39,11 +39,11 @@
 
 @keyframes dotsAnimated {
     0% {
-        background-position: 0% 0%
+        background-position: 0 0
     }
 
     100% {
-        background-position: 0% 100%
+        background-position: 0 508px
     }
 }
 
@@ -166,6 +166,7 @@ main {
 
 #logo {
     transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+    filter: drop-shadow(0 0 5px rgba(0,0,0,.2))
 }
 
 #logo:hover {
@@ -248,15 +249,17 @@ a:active {
 
 .dark {
     color: rgb(226, 243, 255);
-    background-color: rgb(22, 60, 75);
+    background-color: rgb(29, 74, 92);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.418);
 }
 
 .clickable {
+    box-sizing: border-box;
     box-shadow: 0px 10px 0 var(--clickableColor);
     user-select: none;
     transition: all .3s cubic-bezier(0, 0, 0, 1);
     cursor: pointer;
+    border:5px solid var(--clickableColor);
 }
 
 .clickable:hover {
