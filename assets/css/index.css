@@ -82,6 +82,10 @@
 
 }
 
+#my-banner {
+    width: 100%;
+}
+
 html {
     font-family: "Poppins";
     font-weight: 500;
@@ -199,6 +203,7 @@ main {
     bottom: 0;
     justify-content: space-around;
     left: 0;
+    flex-direction: column;
     right: 0;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
